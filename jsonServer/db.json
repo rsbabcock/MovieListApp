@@ -1,0 +1,18 @@
+{
+    "users": [
+        {
+            "id": 1,
+            "firstName": "momma",
+            "lastName": "bear",
+            "email": "momma@email.com",
+            "password": "mock1234"
+        }
+    ],
+    "savedMovies": [
+        {
+            "id": 1,
+            "userId": 1,
+            "movies": []
+        }
+    ]
+}
