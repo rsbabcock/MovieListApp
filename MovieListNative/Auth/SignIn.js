@@ -16,7 +16,8 @@ class SignIn extends Component {
     state = {
         email: 'email',
         password: 'password',
-        validColor: 'black'
+        validColorEmail: 'black',
+        validColorPass: 'black'
     }
 
     _validateEmailRegEx(email) {
@@ -26,12 +27,23 @@ class SignIn extends Component {
     _validateEmail(email){
         this.setState({email: email})
         if(this._validateEmailRegEx(email)){
-            this.setState({ validColor : 'green'})
+            this.setState({ validColorEmail : 'green'})
         } else {
-           this.setState({validColor: 'red'}) 
+           this.setState({validColorEmail: 'red'}) 
         }
     }
-
+    _validatePassRegEx(password){
+        const checkForIsPassword = /^[a-zA-Z1-9]{5,}$/
+        return checkForIsPassword.test(password)
+    }
+    _validatePassword(password){
+        this.setState({password: password})
+        if(this._validatePassRegEx(password)){
+            this.setState({ validColorPass : 'green'})
+        } else {
+           this.setState({validColorPass: 'red'}) 
+        }
+    }
     _onSignIn() {
         const email = this.state.email.toLowerCase()
         const password = this.state.password.toLowerCase()
@@ -69,7 +81,7 @@ class SignIn extends Component {
                     <Text style={styles.header}>Welcome to Movie List</Text>
                     <View style={styles.inputWrapper}>
                         <View style={styles.inputContainer}>
-                            <Icon name="email-outline" size={30} style={styles.icon} color={this.state.validColor}/>
+                            <Icon name="email-outline" size={30} style={styles.icon} color={this.state.validColorEmail}/>
                             <TextInput
                                 clearTextOnFocus
                                 placeholder={this.state.email}
@@ -80,14 +92,13 @@ class SignIn extends Component {
                             </TextInput>
                         </View>
                         <View style={styles.inputContainer}>
-                        <Icon name="check-outline" size={30} style={styles.icon}/>
+                        <Icon name="check-outline" size={30} style={styles.icon} color={this.state.validColorPass}/>
                             <TextInput
                                 clearTextOnFocus
                                 secureTextEntry
                                 placeholder={this.state.password}
                                 style={styles.input}
-                                onChangeText={(text) => this.setState({ password: text })}
-                                onChangeText={() => this._validate()}
+                                onChangeText={(text) => this._validatePassword(text)}
                                 onSubmitEditing={() => this._onSignIn()}
                                 value={this.state.password}>
                             </TextInput>
