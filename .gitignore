@@ -5,5 +5,5 @@ npm-debug.*
 *.p12
 *.key
 *.mobileprovision
-/MovieListNative/api/key.js
-/MovieListNative/node_modules
+MovieListNative/api/key.js*
+MovieListNative/node_modules
