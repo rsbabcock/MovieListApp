@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import {
-    AsyncStorage,
     StyleSheet,
     View,
     TouchableOpacity,
@@ -9,42 +8,53 @@ import {
     Text,
     Alert
 } from 'react-native';
+import Icon from 'react-native-vector-icons/MaterialCommunityIcons'
 import { login } from '../api/api'
 import { saveUserId } from '../api/AsyncManager'
 
 class SignIn extends Component {
     state = {
         email: 'email',
-        password: 'password'
+        password: 'password',
+        validColor: 'black'
     }
 
-    _onChange(state, text){
-        this.setState({ state : text})
+    _validateEmailRegEx(email) {
+        const checkForIsEmail = /([@])\w.+/g
+        return checkForIsEmail.test(email)
+    }
+    _validateEmail(email){
+        this.setState({email: email})
+        if(this._validateEmailRegEx(email)){
+            this.setState({ validColor : 'green'})
+        } else {
+           this.setState({validColor: 'red'}) 
+        }
     }
 
     _onSignIn() {
         const email = this.state.email.toLowerCase()
         const password = this.state.password.toLowerCase()
         login(email)
-        .then( user =>  {
-            if(user.length === 0){
-                Alert.alert(
-                    'Incorrect Username or Password'
-                )
-            } else {
-                user.map(data => {
-                    if(data.email === email && data.password === password){
-                        saveUserId(data.id)
-                        .then(this.props.navigation.navigate('App'))
-                    }
-                    if(data.email !== email || data.password !== password){
-                        Alert.alert(
-                            'Incorrect Username or Password'
-                        )
-                    }
-                })
-            }
-        })
+            .then(user => {
+                if (user.length === 0) {
+                    Alert.alert(
+                        'Incorrect Username or Password'
+                    )
+                } else {
+                    user.map(data => {
+                        if (data.email === email && data.password === password) {
+                            saveUserId(data.id)
+                                .then(this.props.navigation.navigate('App'))
+                        }
+                        if (data.email !== email || data.password !== password) {
+                            Alert.alert(
+                                'Incorrect Username or Password'
+                            )
+                        }
+                    })
+                }
+            })
     }
 
     _goSignUp() {
@@ -52,30 +62,32 @@ class SignIn extends Component {
     }
 
     render() {
+
         return (
             <ImageBackground source={require('../img/bg.png')} style={{ width: '100%', height: '100%' }}>
                 <View style={styles.container}>
                     <Text style={styles.header}>Welcome to Movie List</Text>
                     <View style={styles.inputWrapper}>
                         <View style={styles.inputContainer}>
+                            <Icon name="email-outline" size={30} style={styles.icon} color={this.state.validColor}/>
                             <TextInput
                                 clearTextOnFocus
                                 placeholder={this.state.email}
                                 style={styles.input}
-                                onChangeText={(text) => this.setState({ email: text })}
-                                // onFocus={() => this._onSearch()}
-                                // onSubmitEditing={() => this._onSubmit()}
+                                maxLength={15}
+                                onChangeText={(text) => this._validateEmail(text)}
                                 value={this.state.email}>
                             </TextInput>
                         </View>
                         <View style={styles.inputContainer}>
+                        <Icon name="check-outline" size={30} style={styles.icon}/>
                             <TextInput
                                 clearTextOnFocus
                                 secureTextEntry
                                 placeholder={this.state.password}
                                 style={styles.input}
                                 onChangeText={(text) => this.setState({ password: text })}
-                                // onFocus={() => this._onSearch()}
+                                onChangeText={() => this._validate()}
                                 onSubmitEditing={() => this._onSignIn()}
                                 value={this.state.password}>
                             </TextInput>
@@ -126,14 +138,18 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
     },
     inputContainer: {
+        flexDirection: 'row',
         alignItems: 'center',
-        justifyContent: 'center',
+        // justifyContent: 'center',
         margin: 10,
-        padding: 25,
-        height: 50,
+        height: 70,
         width: 400,
         backgroundColor: 'rgb(250, 250, 250)',
         borderRadius: 25
+    },
+    icon: {
+        marginLeft: 20,
+        marginRight: 20,
     },
     input: {
         height: 40,
