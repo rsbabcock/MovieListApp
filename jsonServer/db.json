@@ -1,18 +1,32 @@
 {
-    "users": [
-        {
-            "id": 1,
-            "firstName": "momma",
-            "lastName": "bear",
-            "email": "momma@email.com",
-            "password": "mock1234"
-        }
-    ],
-    "savedMovies": [
-        {
-            "id": 1,
-            "userId": 1,
-            "movies": []
-        }
-    ]
+  "users": [
+    {
+      "id": 1,
+      "firstName": "momma",
+      "lastName": "bear",
+      "email": "momma@email.com",
+      "password": "mock1234"
+    },
+    {
+      "firstName": "Howdy",
+      "lastName": "Howdy",
+      "email": "Howdy@email.com",
+      "password": "mock1234",
+      "id": 2
+    },
+    {
+      "firstName": "Kitty",
+      "lastName": "Kat",
+      "email": "Kat@email.com",
+      "password": "mock1234",
+      "id": 3
+    }
+  ],
+  "savedMovies": [
+    {
+      "id": 1,
+      "userId": 1,
+      "movies": []
+    }
+  ]
 }

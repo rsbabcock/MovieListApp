@@ -9,11 +9,11 @@ export default class Home extends Component {
     return {
       headerTitle: (<TouchableOpacity
         style={styles.button}
-        onPress={() => 
+        onPress={() =>
           removeUserId()
-          .then(
-            navigation.navigate('Auth')
-          )
+            .then(
+              navigation.navigate('Auth')
+            )
 
         }
       ><Text style={styles.input}>Logout</Text>

@@ -51,7 +51,7 @@ class SignIn extends Component {
             .then(user => {
                 if (user.length === 0) {
                     Alert.alert(
-                        'Incorrect Username or Password'
+                        "We haven't been introduced, please sign up!"
                     )
                 } else {
                     user.map(data => {

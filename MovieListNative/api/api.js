@@ -31,3 +31,23 @@ export function login(email){
         .catch(error => console.log('user validation issues', error))
 
 }
+
+export function createUser(userData){
+    const signUpUrl = `http://localhost:3000/users`
+
+    return fetch(signUpUrl, {
+        method: 'POST',
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify({
+            firstName: userData.firstName,
+            lastName: userData.lastName,
+            email: userData.email,
+            password: userData.password
+        })
+
+    })
+        .then(response => response.json())
+        .then(user => user)
+        .catch(error => console.log('user validation issues', error))
+
+}
