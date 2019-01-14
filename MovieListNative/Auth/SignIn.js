@@ -14,8 +14,8 @@ import { saveUserId } from '../api/AsyncManager'
 
 class SignIn extends Component {
     state = {
-        email: 'email',
-        password: 'password',
+        email: '',
+        password: '',
         validColorEmail: 'black',
         validColorPass: 'black'
     }
@@ -47,26 +47,30 @@ class SignIn extends Component {
     _onSignIn() {
         const email = this.state.email.toLowerCase()
         const password = this.state.password.toLowerCase()
-        login(email)
-            .then(user => {
-                if (user.length === 0) {
-                    Alert.alert(
-                        "We haven't been introduced, please sign up!"
-                    )
-                } else {
-                    user.map(data => {
-                        if (data.email === email && data.password === password) {
-                            saveUserId(data.id)
-                                .then(this.props.navigation.navigate('App'))
-                        }
-                        if (data.email !== email || data.password !== password) {
-                            Alert.alert(
-                                'Incorrect Username or Password'
-                            )
-                        }
-                    })
-                }
-            })
+        if( this._validateEmailRegEx(email) && this._validatePassRegEx(password)){
+            login(email)
+                .then(user => {
+                    if (user.length === 0) {
+                        Alert.alert(
+                            "We haven't been introduced, please sign up!"
+                        )
+                    } else {
+                        user.map(data => {
+                            if (data.email === email && data.password === password) {
+                                saveUserId(data.id)
+                                    .then(this.props.navigation.navigate('App'))
+                            }
+                            if (data.email !== email || data.password !== password) {
+                                Alert.alert(
+                                    'Incorrect Username or Password'
+                                )
+                            }
+                        })
+                    }
+                })
+        } else {
+            Alert.alert('Missing Username or Password')
+        }
     }
 
     _goSignUp() {
@@ -84,7 +88,7 @@ class SignIn extends Component {
                             <Icon name="email-outline" size={30} style={styles.icon} color={this.state.validColorEmail}/>
                             <TextInput
                                 clearTextOnFocus
-                                placeholder={this.state.email}
+                                placeholder="Email"
                                 style={styles.input}
                                 maxLength={15}
                                 onChangeText={(text) => this._validateEmail(text)}
@@ -96,7 +100,7 @@ class SignIn extends Component {
                             <TextInput
                                 clearTextOnFocus
                                 secureTextEntry
-                                placeholder={this.state.password}
+                                placeholder="Password"
                                 style={styles.input}
                                 onChangeText={(text) => this._validatePassword(text)}
                                 onSubmitEditing={() => this._onSignIn()}
