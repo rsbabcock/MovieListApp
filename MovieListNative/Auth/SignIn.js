@@ -10,7 +10,8 @@ import {
 } from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons'
 import { login } from '../api/api'
-import { saveUserId } from '../api/AsyncManager'
+import { saveUserId, getUserId } from '../api/AsyncManager'
+
 
 class SignIn extends Component {
     state = {
@@ -57,7 +58,7 @@ class SignIn extends Component {
                     } else {
                         user.map(data => {
                             if (data.email === email && data.password === password) {
-                                saveUserId(data.id)
+                                saveUserId(`${data.email}_${data.id}`)
                                     .then(this.props.navigation.navigate('App'))
                             }
                             if (data.email !== email || data.password !== password) {

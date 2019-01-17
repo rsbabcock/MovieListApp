@@ -5,7 +5,7 @@ import {
 
 export async function saveUserId(userId){ 
     try{
-        await AsyncStorage.setItem('userId', 'userId')
+        await AsyncStorage.setItem('userId', userId)
     } catch (error) {
         // Error retrieving Data
         console.log(error.message)

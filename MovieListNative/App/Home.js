@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { StyleSheet, FlatList, View, TextInput, ActivityIndicator, ImageBackground, TouchableOpacity, Text } from 'react-native';
 import { searchMovies } from '../api/api.js'
 import MovieCard from './MovieCard.js';
-import { removeUserId } from '../api/AsyncManager'
+import { removeUserId, getUserId } from '../api/AsyncManager'
 
 export default class Home extends Component {
   static navigationOptions = ({ navigation }) => {
@@ -25,6 +25,9 @@ export default class Home extends Component {
     movies: [],
     isLoading: false,
     searchComplete: false
+  }
+  componentDidMount(){
+    getUserId().then(response => console.log(response))
   }
 
   _onSearch() {
