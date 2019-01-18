@@ -4,19 +4,31 @@ import {
     ScrollView,
     StyleSheet,
     View,
-    ImageBackground
+    ImageBackground,
+    TouchableOpacity,
+    Alert
 } from 'react-native'
-import { getMovieDetail } from '../api/api'
+import { getMovieDetail, saveMovieToDb } from '../api/api'
+import { getUserId } from '../api/AsyncManager'
 
 class MovieDetailList extends Component {
     state = {
-        movie: {}
+        movie: {},
+        currentUser: ''
     }
     componentDidMount() {
         const { navigation } = this.props
         const movie = navigation.getParam('itemId', 'null')
         getMovieDetail(movie).then(data => this.setState({ movie: data }))
-        // this.setState({ movie : data}))
+        getUserId().then(data => this.setState({ currentUser: data }))
+    }
+    saveMovie(movie) {
+        let userId = parseInt(this.state.currentUser.slice(-1))
+        saveMovieToDb(movie, userId).then(success => {
+            Alert.alert(
+                `${success.movie.Title} added to your movies`
+            )
+        })
     }
     render() {
         const movie = this.state.movie
@@ -24,6 +36,11 @@ class MovieDetailList extends Component {
             <ImageBackground source={require('../img/bg.png')} style={{ height: '100%', width: '100%' }}>
                 <ScrollView contentContainerStyle={styles.container}>
                     <Text style={styles.title}>{movie.Title}</Text>
+                    <TouchableOpacity
+                        onPress={() => this.saveMovie(movie)}
+                        style={styles.button} >
+                        <Text>Save this Movie</Text>
+                    </TouchableOpacity>
                     <Text style={styles.description}>Actors: </Text>
                     <Text style={styles.description}>{movie.Actors} </Text>
                     <Text style={styles.description}>Rated: {movie.Rated} </Text>

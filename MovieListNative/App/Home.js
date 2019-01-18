@@ -7,7 +7,7 @@ import { removeUserId, getUserId } from '../api/AsyncManager'
 export default class Home extends Component {
   static navigationOptions = ({ navigation }) => {
     return {
-      headerTitle: (<TouchableOpacity
+      headerRight: (<TouchableOpacity
         style={styles.button}
         onPress={() =>
           removeUserId()
@@ -17,6 +17,12 @@ export default class Home extends Component {
 
         }
       ><Text style={styles.input}>Logout</Text>
+      </TouchableOpacity>),
+      headerLeft: (<TouchableOpacity
+        style={styles.button}
+        onPress={() =>
+              navigation.navigate('MyMovies')}
+      ><Text style={styles.input}>MyMovies</Text>
       </TouchableOpacity>)
     }
   }
@@ -24,10 +30,10 @@ export default class Home extends Component {
     text: 'Search for a movie',
     movies: [],
     isLoading: false,
-    searchComplete: false
+    searchComplete: false,
   }
   componentDidMount(){
-    getUserId().then(response => console.log(response))
+  //  getUserId().then(user => this.setState({currentUser: user}))
   }
 
   _onSearch() {

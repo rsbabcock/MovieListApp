@@ -24,9 +24,296 @@
   ],
   "savedMovies": [
     {
-      "id": 1,
       "userId": 1,
-      "movies": []
+      "movie": {
+        "Title": "Happy Feet",
+        "Year": "2006",
+        "Rated": "PG",
+        "Released": "17 Nov 2006",
+        "Runtime": "108 min",
+        "Genre": "Animation, Adventure, Comedy, Family, Music, Musical, Romance",
+        "Director": "George Miller, Warren Coleman(co-director), Judy Morris(co-director)",
+        "Writer": "George Miller, John Collee, Judy Morris, Warren Coleman",
+        "Actors": "Carlos Alazraqui, Lombardo Boyar, Jeffrey Garcia, Johnny A. Sanchez",
+        "Plot": "This is the story of a little penguin named Mumble who has a terrible singing voice and later discovers he has no Heartsong. However, Mumble has an astute talent for something that none of the penguins had ever seen before: tap dancing. Though Mumble's mom, Norma Jean, thinks this little habit is cute, his dad, Memphis, says it \"just ain't penguin.\" Besides, they both know that, without a Heartsong, Mumble may never find true love. As fate would have it, his one friend, Gloria, happens to be the best singer around. Mumble and Gloria have a connection from the moment they hatch, but she struggles with his strange \"hippity- hoppity\" ways. Mumble is just too different--especially for Noah the Elder, the stern leader of Emperor Land, who ultimately casts him out of the community. Away from home for the first time, Mumble meets a posse of decidedly un-Emperor-like penguins--the Adelie Amigos. Led by Ramon, the Adelies instantly embrace Mumble's cool dance moves and invite him to party with them. In Adelie Land, Mumble seeks the counsel of Lovelace the Guru, a crazy-feathered Rockhopper penguin who will answer any of life's questions for the price of a pebble. Together with Lovelace and the Amigos, Mumble sets out across vast landscapes and, after some epic encounters, proves that by being true to yourself, you can make all the difference in the world.",
+        "Language": "English",
+        "Country": "USA, Australia",
+        "Awards": "Won 1 Oscar. Another 18 wins & 23 nominations.",
+        "Poster": "https://m.media-amazon.com/images/M/MV5BMTQyNTkxMjUwMV5BMl5BanBnXkFtZTcwMDQ2NTU0MQ@@._V1_SX300.jpg",
+        "Ratings": [
+          {
+            "Source": "Internet Movie Database",
+            "Value": "6.5/10"
+          },
+          {
+            "Source": "Rotten Tomatoes",
+            "Value": "76%"
+          },
+          {
+            "Source": "Metacritic",
+            "Value": "77/100"
+          }
+        ],
+        "Metascore": "77",
+        "imdbRating": "6.5",
+        "imdbVotes": "153,690",
+        "imdbID": "tt0366548",
+        "Type": "movie",
+        "DVD": "27 Mar 2007",
+        "BoxOffice": "$197,800,000",
+        "Production": "Warner Bros. Pictures",
+        "Website": "http://www.happyfeetmovie.com/",
+        "Response": "True"
+      },
+      "id": 1
+    },
+    {
+      "userId": 1,
+      "movie": {
+        "Title": "The Inn of the Sixth Happiness",
+        "Year": "1958",
+        "Rated": "APPROVED",
+        "Released": "19 Dec 1958",
+        "Runtime": "158 min",
+        "Genre": "Biography, Drama, War",
+        "Director": "Mark Robson",
+        "Writer": "Isobel Lennart (screenplay), Alan Burgess (novel)",
+        "Actors": "Ingrid Bergman, Curd Jürgens, Robert Donat, Michael David",
+        "Plot": "All her life Englishwoman Gladys Aylward knew that China was the place where she belonged. Not qualified to be sent there as a missionary, Gladys works as a domestic to earn the money to send herself to a poor, remote village. There she eventually lives a full and happy life: running the inn, acting as \"foot inspector\", advising the local Mandarin and even winning the heart of mixed race Captain Lin Nan. But Gladys discovers her real destiny when the country is invaded by Japan and the Chinese children need her to save their lives. Based on a true story.",
+        "Language": "English, Japanese, Mandarin, Russian, Cantonese",
+        "Country": "USA",
+        "Awards": "Nominated for 1 Oscar. Another 3 wins & 6 nominations.",
+        "Poster": "https://m.media-amazon.com/images/M/MV5BNWNiOWRmN2YtN2M4MC00NzYzLWJmM2ItNTk2ZDYxMWY1Y2YwXkEyXkFqcGdeQXVyMzU4Nzk4MDI@._V1_SX300.jpg",
+        "Ratings": [
+          {
+            "Source": "Internet Movie Database",
+            "Value": "7.3/10"
+          }
+        ],
+        "Metascore": "N/A",
+        "imdbRating": "7.3",
+        "imdbVotes": "4,037",
+        "imdbID": "tt0051776",
+        "Type": "movie",
+        "DVD": "05 Aug 2003",
+        "BoxOffice": "N/A",
+        "Production": "20th Century Fox",
+        "Website": "N/A",
+        "Response": "True"
+      },
+      "id": 2
+    },
+    {
+      "userId": 1,
+      "movie": {
+        "Title": "Beauty and the Beast",
+        "Year": "1991",
+        "Rated": "G",
+        "Released": "22 Nov 1991",
+        "Runtime": "84 min",
+        "Genre": "Animation, Family, Fantasy, Musical, Romance",
+        "Director": "Gary Trousdale, Kirk Wise",
+        "Writer": "Linda Woolverton (animation screenplay by), Brenda Chapman (story by), Chris Sanders (story by), Burny Mattinson (story by), Kevin Harkey (story by), Brian Pimental (story by), Bruce Woodside (story by), Joe Ranft (story by), Tom Ellery (story by), Kelly Asbury (story by), Robert Lence (story by)",
+        "Actors": "Robby Benson, Jesse Corti, Rex Everhart, Angela Lansbury",
+        "Plot": "Having lived a life in selfishness, a young prince is cursed by a mysterious enchantress to having the appearance of a monstrous beast. His only hope is to learn to love a young woman and earn her love in return in order to redeem himself. Years later, his chance shows itself when a young maiden named Belle offers to take her ill father's place as his prisoner. With help from the castle's enchanted staff, Belle learns to appreciate her captor and immediately falls in love with him. Back in the village however, an unscrupulous hunter has his own plans for Belle.",
+        "Language": "English, French",
+        "Country": "USA",
+        "Awards": "Won 2 Oscars. Another 24 wins & 25 nominations.",
+        "Poster": "https://m.media-amazon.com/images/M/MV5BMzE5MDM1NDktY2I0OC00YWI5LTk2NzUtYjczNDczOWQxYjM0XkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg",
+        "Ratings": [
+          {
+            "Source": "Internet Movie Database",
+            "Value": "8.0/10"
+          },
+          {
+            "Source": "Rotten Tomatoes",
+            "Value": "94%"
+          },
+          {
+            "Source": "Metacritic",
+            "Value": "95/100"
+          }
+        ],
+        "Metascore": "95",
+        "imdbRating": "8.0",
+        "imdbVotes": "379,513",
+        "imdbID": "tt0101414",
+        "Type": "movie",
+        "DVD": "08 Oct 2002",
+        "BoxOffice": "$47,611,331",
+        "Production": "Buena Vista",
+        "Website": "http://www.disney.com/beautyandthebeast",
+        "Response": "True"
+      },
+      "id": 3
+    },
+    {
+      "userId": 1,
+      "movie": {
+        "Title": "Pleasantville",
+        "Year": "1998",
+        "Rated": "PG-13",
+        "Released": "23 Oct 1998",
+        "Runtime": "124 min",
+        "Genre": "Comedy, Drama, Fantasy",
+        "Director": "Gary Ross",
+        "Writer": "Gary Ross",
+        "Actors": "Tobey Maguire, Reese Witherspoon, William H. Macy, Joan Allen",
+        "Plot": "David Wagner is a kid whose mind is stuck in the 1950s. He's addicted to a classic 50's sitcom television show called \"Pleasantville\". Pleasntville is a simple place, a place where all of its citizens are swell and simple-minded folks, a place where the word \"violence\", and life outside of Pleasantville, is unbeknown to its inhabitants; things are perfect down in Pleasantville. One evening, the life of David and his obnoxious sister Jennifer take a bizarre turn when an eccentric repairman hand them a supposed magical remote. After a quarrel between the siblings, they inexplicably zap themselves into the world of \"Pleasantville\". Now, David and Jennifer must adjust to a 50s lifestyle of repressed desires and considerably different societal values while trying to find their way home.",
+        "Language": "English",
+        "Country": "USA",
+        "Awards": "Nominated for 3 Oscars. Another 18 wins & 41 nominations.",
+        "Poster": "https://m.media-amazon.com/images/M/MV5BYTRlYzk4NDktODE3Ni00YjFkLWFjYmUtNjg1MzdmYmFmOTJkXkEyXkFqcGdeQXVyMTAwMzUyOTc@._V1_SX300.jpg",
+        "Ratings": [
+          {
+            "Source": "Internet Movie Database",
+            "Value": "7.5/10"
+          },
+          {
+            "Source": "Rotten Tomatoes",
+            "Value": "85%"
+          },
+          {
+            "Source": "Metacritic",
+            "Value": "71/100"
+          }
+        ],
+        "Metascore": "71",
+        "imdbRating": "7.5",
+        "imdbVotes": "113,016",
+        "imdbID": "tt0120789",
+        "Type": "movie",
+        "DVD": "23 Mar 1999",
+        "BoxOffice": "N/A",
+        "Production": "New Line Cinema",
+        "Website": "http://www.nlcpub.com/Relsched/pleasantville.html",
+        "Response": "True"
+      },
+      "id": 4
+    },
+    {
+      "userId": 1,
+      "movie": {
+        "Title": "Batman Forever",
+        "Year": "1995",
+        "Rated": "PG-13",
+        "Released": "16 Jun 1995",
+        "Runtime": "121 min",
+        "Genre": "Action, Adventure, Fantasy",
+        "Director": "Joel Schumacher",
+        "Writer": "Bob Kane (characters), Lee Batchler (story), Janet Scott Batchler (story), Lee Batchler (screenplay), Janet Scott Batchler (screenplay), Akiva Goldsman (screenplay)",
+        "Actors": "Val Kilmer, Tommy Lee Jones, Jim Carrey, Nicole Kidman",
+        "Plot": "The Dark Knight of Gotham City confronts a dastardly duo: Two-Face and the Riddler. Formerly District Attorney Harvey Dent, Two-Face incorrectly believes Batman caused the courtroom accident which left him disfigured on one side; he has unleashed a reign of terror on the good people of Gotham. Edward Nygma, computer-genius and former employee of millionaire Bruce Wayne, is out to get the philanthropist; as The Riddler he perfects a device for draining information from all the brains in Gotham, including Bruce Wayne's knowledge of his other identity. Batman/Wayne is/are the love focus of Dr. Chase Meridan. Former circus acrobat Dick Grayson, his family killed by Two-Face, becomes Wayne's ward and Batman's new partner Robin the Boy Wonder.",
+        "Language": "English",
+        "Country": "USA, UK",
+        "Awards": "Nominated for 3 Oscars. Another 10 wins & 22 nominations.",
+        "Poster": "https://m.media-amazon.com/images/M/MV5BNWY3M2I0YzItNzA1ZS00MzE3LThlYTEtMTg2YjNiOTYzODQ1XkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg",
+        "Ratings": [
+          {
+            "Source": "Internet Movie Database",
+            "Value": "5.4/10"
+          },
+          {
+            "Source": "Rotten Tomatoes",
+            "Value": "39%"
+          },
+          {
+            "Source": "Metacritic",
+            "Value": "51/100"
+          }
+        ],
+        "Metascore": "51",
+        "imdbRating": "5.4",
+        "imdbVotes": "215,220",
+        "imdbID": "tt0112462",
+        "Type": "movie",
+        "DVD": "27 Aug 1997",
+        "BoxOffice": "N/A",
+        "Production": "Warner Bros. Pictures",
+        "Website": "N/A",
+        "Response": "True"
+      },
+      "id": 5
+    },
+    {
+      "userId": 1,
+      "movie": {
+        "Title": "100 Feet",
+        "Year": "2008",
+        "Rated": "R",
+        "Released": "24 Jul 2008",
+        "Runtime": "96 min",
+        "Genre": "Horror, Mystery, Thriller",
+        "Director": "Eric Red",
+        "Writer": "Eric Red",
+        "Actors": "Famke Janssen, Bobby Cannavale, Ed Westwick, Michael Paré",
+        "Plot": "A young woman, Marnie Watson, is granted early release from her prison sentence for manslaughter (killing her husband - a violent NYC cop - in self defense) on condition she wear an electronic ankle bracelet and remain within her home, effectively under house arrest, for the remainder of her sentence. Her late husband's partner keeps tabs on her from a patrol car parked across the street, hoping she'll violate probation and he can send her back to prison. But the 100-foot radius her ankle bracelet allows isn't the worst of her problems. Her dead husband --now a malevolent ghost--is still in the house, where he died -- intent on savage revenge.",
+        "Language": "English",
+        "Country": "USA",
+        "Awards": "N/A",
+        "Poster": "https://m.media-amazon.com/images/M/MV5BYTAwMjQ3MTEtMWRkMi00OGI4LWIyNmYtNGIyZWI4YTQ3MmY4XkEyXkFqcGdeQXVyNDQwMTQ5ODk@._V1_SX300.jpg",
+        "Ratings": [
+          {
+            "Source": "Internet Movie Database",
+            "Value": "5.5/10"
+          }
+        ],
+        "Metascore": "N/A",
+        "imdbRating": "5.5",
+        "imdbVotes": "11,390",
+        "imdbID": "tt0899128",
+        "Type": "movie",
+        "DVD": "06 Oct 2009",
+        "BoxOffice": "N/A",
+        "Production": "The Asylum",
+        "Website": "http://www.myspace.com/100feetmovie",
+        "Response": "True"
+      },
+      "id": 6
+    },
+    {
+      "userId": 1,
+      "movie": {
+        "Title": "Star Wars: Episode IV - A New Hope",
+        "Year": "1977",
+        "Rated": "PG",
+        "Released": "25 May 1977",
+        "Runtime": "121 min",
+        "Genre": "Action, Adventure, Fantasy, Sci-Fi",
+        "Director": "George Lucas",
+        "Writer": "George Lucas",
+        "Actors": "Mark Hamill, Harrison Ford, Carrie Fisher, Peter Cushing",
+        "Plot": "The Imperial Forces, under orders from cruel Darth Vader, hold Princess Leia hostage in their efforts to quell the rebellion against the Galactic Empire. Luke Skywalker and Han Solo, captain of the Millennium Falcon, work together with the companionable droid duo R2-D2 and C-3PO to rescue the beautiful princess, help the Rebel Alliance and restore freedom and justice to the Galaxy.",
+        "Language": "English",
+        "Country": "USA",
+        "Awards": "Won 6 Oscars. Another 50 wins & 28 nominations.",
+        "Poster": "https://m.media-amazon.com/images/M/MV5BNzVlY2MwMjktM2E4OS00Y2Y3LWE3ZjctYzhkZGM3YzA1ZWM2XkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_SX300.jpg",
+        "Ratings": [
+          {
+            "Source": "Internet Movie Database",
+            "Value": "8.6/10"
+          },
+          {
+            "Source": "Rotten Tomatoes",
+            "Value": "93%"
+          },
+          {
+            "Source": "Metacritic",
+            "Value": "90/100"
+          }
+        ],
+        "Metascore": "90",
+        "imdbRating": "8.6",
+        "imdbVotes": "1,092,532",
+        "imdbID": "tt0076759",
+        "Type": "movie",
+        "DVD": "21 Sep 2004",
+        "BoxOffice": "N/A",
+        "Production": "20th Century Fox",
+        "Website": "http://www.starwars.com/episode-iv/",
+        "Response": "True"
+      },
+      "id": 7
     }
   ]
 }

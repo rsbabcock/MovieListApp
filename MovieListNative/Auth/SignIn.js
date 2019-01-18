@@ -97,7 +97,7 @@ class SignIn extends Component {
                             </TextInput>
                         </View>
                         <View style={styles.inputContainer}>
-                        <Icon name="check-outline" size={30} style={styles.icon} color={this.state.validColorPass}/>
+                        <Icon name="lock" size={30} style={styles.icon} color={this.state.validColorPass}/>
                             <TextInput
                                 clearTextOnFocus
                                 secureTextEntry
